@@ -158,7 +158,9 @@ function answer(i,q){
   if(chosen.ok){streak++;elS.textContent=streak;
     if(streak>best){best=streak;localStorage.setItem(CFG.key,best);elB.textContent=best;}
     const nx=document.createElement('button');nx.className='next';nx.textContent='Weiter →';nx.onclick=newQuestion;stage.querySelector('.q').appendChild(nx);
-  }else{btns[i].classList.add('wrong');setTimeout(()=>gameOver(),950);}
+  }else{btns[i].classList.add('wrong');
+    const nx=document.createElement('button');nx.className='next';nx.textContent='Weiter →';
+    nx.onclick=gameOver;stage.querySelector('.q').appendChild(nx);}
 }
 
 async function gameOver(){

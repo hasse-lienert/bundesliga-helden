@@ -73,9 +73,9 @@ footer a{color:var(--muted);}
   <header>
     <div class="title"><h1>Dullinger schiesst über das Tor</h1><p class="sub">Bundesligahelden · Nicht dabei</p></div>
     <div class="scores">
-      <div class="s">Serie <b id="streak">0</b></div>
-      <div class="best">Rekord <b id="best">0</b></div>
-      <div class="welt">Welt <b id="welt">–</b></div>
+      <div class="s">Aktuelle Serie <b id="streak">0</b></div>
+      <div class="best">Deine Bestleistung <b id="best">0</b></div>
+      <div class="welt">Rekord <b id="welt">–</b></div>
     </div>
   </header>
   <div id="stage"></div>
@@ -188,7 +188,7 @@ async function gameOver(){
     }
     stage.innerHTML=`<div class="q over">
       <p class="muted">Serie beendet</p><div class="big">${f}</div><h2>richtige in Folge</h2>
-      <p class="muted">Lokaler Rekord: ${best}</p>
+      <p class="muted">Deine Bestleistung: ${best}</p>
       ${entry}
       <h3 class="boardh">Weltrangliste</h3>${boardHTML(hlName)}
       <button class="next" id="again">Nochmal spielen</button></div>`;
